@@ -1,10 +1,15 @@
 package hotDrinks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class AllowedCombinations {
 	
-	 ArrayList<AllowedCombinations> combined = new ArrayList<AllowedCombinations>();
+	 List<String> combined = new ArrayList<>(Arrays.asList());{
+	
+	
+	 } 
 	 
 
 }
