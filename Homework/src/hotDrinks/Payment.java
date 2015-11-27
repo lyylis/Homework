@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Payment {
 	public static double enterMoney(){
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		double payAmount=0.0;
 		System.out.print("Please pay:");
