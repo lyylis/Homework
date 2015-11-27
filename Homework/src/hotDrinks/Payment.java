@@ -1,5 +1,7 @@
 package hotDrinks;
-
+/*
+ * User enters money into the vending machine.
+ */
 import java.util.Scanner;
 
 public class Payment {

@@ -1,11 +1,9 @@
 package hotDrinks;
-
-import java.util.ArrayList;
+/*
+ * Holds the unit price of a drink. Same price on all drinks.
+ */
 
 public class Price {
-	public static ArrayList<Price> price = new ArrayList<>();
-	{
-
-	}
-
+	public static double price=2.50;
+	
 }
