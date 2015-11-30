@@ -1,4 +1,6 @@
 package hotDrinks;
+
+
 /*
  * Method to dispense drink if enough money.
  */

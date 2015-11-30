@@ -1,14 +1,17 @@
 package hotDrinks;
 
 public enum Types {
-	COFFEE, LATTE, CAPPUCCINO, ESPRESSO, HOTWATER, HOTCHOCOLATE;
+	COFFEE,COFFEEANDCREAM, LATTE, CAPPUCCINO, ESPRESSO, HOTWATER, HOTCHOCOLATE;
 	
 	public String toString() {
 		String name = "";
 		switch (this){
 		case COFFEE:
-		name = "Coffee";
+		name = "Black Coffee";
 		break;
+		case COFFEEANDCREAM:
+			name = "Coffee and Cream";
+			break;
 		case LATTE:
 			name = "Latte";
 			break;
