@@ -10,7 +10,7 @@ public class Select {
 	
 
 			System.out.println("Choose drink:");
-			ButtonsDrink.frame();
+			ButtonArray.frame();
 			
 			
 	}
