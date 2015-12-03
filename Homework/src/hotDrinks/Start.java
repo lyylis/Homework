@@ -3,13 +3,13 @@ package hotDrinks;
 public class Start {
 
 	public static void main(String[] args) {
+		System.out.println("(Lüüli Suuk IA17) Hot Drinks Vending Machine");
+		System.out.println("Welcome!");
 		double money = 0.0;
 		money = Payment.enterMoney();
-
 		if (AmountMoney.moneyEnough(money)) { // checks does the amount of money
 												// is enough
 			Select.createDrinks();
-			// if (drinkSelected!=null){
 
 		} else {
 			Notify.notify("Not enough money!"); // user has entered less money
@@ -21,7 +21,6 @@ public class Start {
 					+ ChangeMoney.issueChange(money)); // change is returned to
 														// user
 		}
-
 	}
 
 }

@@ -1,6 +1,7 @@
 package hotDrinks;
+
 /*
- * method that checks have user entered enough money.
+ * Method that checks the amount of money entered by the user.
  */
 public class AmountMoney {
 	public static boolean moneyEnough(double enteredMoney) {

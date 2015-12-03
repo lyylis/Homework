@@ -1,20 +1,17 @@
 package buttons;
 
 /*
- * Buttons for user to select the drink.
+ * Buttons select the drink.
  */
 import hotDrinks.DispenseDrink;
-
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
-public class ButtonArray {
+public class ButtonDrinks {
 	static String[] drinks = { "Black Coffee", "Coffee and Cream", "Latte",
 			"Cappuccino", "Espresso", "Hot Water", "Hot Chocolate" };
-	static String[] additional = { "Sugar" };
 
 	public static void frame() {
 		JFrame frame = new JFrame();
@@ -23,24 +20,27 @@ public class ButtonArray {
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JRadioButton[][] jRadioButton = new JRadioButton[7][1];
+		JRadioButton jRadioButton = new JRadioButton();
 		ButtonGroup bg = new ButtonGroup();
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(7, 7));
 		for (int i = 0; i < 7; i++) {
-			for (int j = 0; j < 1; j++) {
+			JRadioButton btn = new JRadioButton();
+			btn.addActionListener(listener);
+			btn.setText(drinks[i]);
+			bg.add(btn);
+			panel.add(btn);
+			btn = jRadioButton;
+			frame.getContentPane().add(panel);
+			frame.setVisible(true);
 
-				JRadioButton btn = new JRadioButton();
-				btn.addActionListener(listener);
-				btn.setText(drinks[i] + additional[j]);
-				bg.add(btn);
-				panel.add(btn);
-				btn = jRadioButton[i][j];
-			}
+		}
+		boolean isButtonSelected = jRadioButton.isSelected();
+		if (isButtonSelected) {
+		} else {
+
 		}
 
-		frame.getContentPane().add(panel);
-		frame.setVisible(true);
 	}
 
 	static ActionListener listener = new ActionListener() {
@@ -50,5 +50,4 @@ public class ButtonArray {
 			DispenseDrink.dispenseDrink();
 		}
 	};
-
 }

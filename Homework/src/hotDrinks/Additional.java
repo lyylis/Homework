@@ -1,5 +1,8 @@
 package hotDrinks;
 
+/*
+ * List of additional selections.
+ */
 public enum Additional {
 	SUGAR;
 

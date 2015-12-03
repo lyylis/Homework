@@ -9,11 +9,11 @@ public class Payment {
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		double payAmount=0.0;
-		System.out.print("Please pay:");
+		System.out.print("Please pay (price "+ Price.price+ "):");
 		payAmount=input.nextDouble();
 		
 		return payAmount;
 		
 	}
-
+ 
 }
