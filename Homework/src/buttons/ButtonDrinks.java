@@ -4,14 +4,15 @@ package buttons;
  * Buttons select the drink.
  */
 import hotDrinks.DispenseDrink;
+import hotDrinks.Types;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class ButtonDrinks {
-	static String[] drinks = { "Black Coffee", "Coffee and Cream", "Latte",
-			"Cappuccino", "Espresso", "Hot Water", "Hot Chocolate" };
 
 	public static void frame() {
 		JFrame frame = new JFrame();
@@ -24,10 +25,10 @@ public class ButtonDrinks {
 		ButtonGroup bg = new ButtonGroup();
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(7, 7));
-		for (int i = 0; i < 7; i++) {
+		for (Types type : Types.values()) {
 			JRadioButton btn = new JRadioButton();
 			btn.addActionListener(listener);
-			btn.setText(drinks[i]);
+			btn.setText(type.toString());
 			bg.add(btn);
 			panel.add(btn);
 			btn = jRadioButton;

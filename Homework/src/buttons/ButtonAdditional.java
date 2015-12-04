@@ -3,18 +3,19 @@ package buttons;
 /*
  * Buttons for selecting additional (like sugar).
  */
+import hotDrinks.Additional;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class ButtonAdditional {
 
-	public static String[] additional = { "Yes", "No" };
-
 	public static void frame2() {
 		JFrame frame = new JFrame();
-		frame.setTitle("Add Sugar");
+		frame.setTitle("Add Sugar and Cream");
 		frame.setSize(200, 200);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,10 +23,10 @@ public class ButtonAdditional {
 		ButtonGroup bg = new ButtonGroup();
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(1, 2));
-		for (int j = 0; j < 2; j++) {
+		for (Additional additional : Additional.values()) {
 			JRadioButton btn2 = new JRadioButton();
 			btn2.addActionListener(listener);
-			btn2.setText(additional[j]);
+			btn2.setText(additional.toString());
 			bg.add(btn2);
 			panel.add(btn2);
 			btn2 = jRadioButton2;
