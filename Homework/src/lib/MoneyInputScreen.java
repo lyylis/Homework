@@ -7,27 +7,34 @@ import java.awt.Component;
 import javax.swing.*;
 
 /*
- * Copied code: https://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
+ * Copied base code from: https://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
  */
 
 public class MoneyInputScreen {
-	// Object[] possibilities = {"ham", "spam", "yam"};
-	private Component frame;
-	String s = (String) JOptionPane.showInputDialog(frame, "Please pay ("+Price.price+")" ,
-			JOptionPane.PLAIN_MESSAGE);
-	{
+	public static Double userInput() {
 
-		// If a string was returned, say so.
-		if ((s != null) && (s.length() > 0)) {
-			setLabel("Paid " + s + "!");
-			//return;
+		// Object[] possibilities = {"ham", "spam", "yam"};
+		Component frame = null;
+		String s = (String) JOptionPane.showInputDialog(frame, "Please pay ("
+				+ Price.price + ")", null, JOptionPane.PLAIN_MESSAGE);
+		{
+
+			// If a string was returned, say so.
+			if ((s != null) && (s.length() > 0)) {
+				setLabel("Paid " + s + "!");
+				//return;
+			}
+
+			// If you're here, the return value was null/empty.
+			setLabel("No payment made!");
+
 		}
-
-		// If you're here, the return value was null/empty.
-		setLabel("No payment made!");
+		double sv = Double.parseDouble(s); //String value is turned into double
+		return sv;
 
 	}
-	private void setLabel(String string) {
+
+	private static void setLabel(String string) {
 		// TODO Auto-generated method stub
 		
 	}
