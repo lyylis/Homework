@@ -1,11 +1,13 @@
 package hotDrinks;
 
+import javax.swing.JOptionPane;
+
 /*
  * Method to display message, if drink selected.
  */
 public class DispenseDrink {
 	public static void dispenseDrink() {
-		System.out.println("Please take your cup!");
+		JOptionPane.showMessageDialog(null, "Please take your cup!");
 
 	}
 

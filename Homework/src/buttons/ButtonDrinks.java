@@ -48,7 +48,6 @@ public class ButtonDrinks {
 	static ActionListener listener = new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(null, "Drink Selected");
 			DispenseDrink.dispenseDrink();
 		
 			System.exit(0);
