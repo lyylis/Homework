@@ -16,25 +16,25 @@ public class ButtonAdditional {
 	public static void frame2() {
 		JFrame frame = new JFrame();
 		frame.setTitle("Add Sugar and Cream");
-		frame.setSize(200, 200);
+		frame.setSize(300, 200);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		JRadioButton jRadioButton2 = new JRadioButton();
+		JCheckBox jCheckBox = new JCheckBox();
 		ButtonGroup bg = new ButtonGroup();
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(1, 2));
 		for (Additional additional : Additional.values()) {
-			JRadioButton btn2 = new JRadioButton();
+			JCheckBox btn2 = new JCheckBox();
 			btn2.addActionListener(listener);
 			btn2.setText(additional.toString());
 			bg.add(btn2);
 			panel.add(btn2);
-			btn2 = jRadioButton2;
+			btn2 = jCheckBox;
 			frame.getContentPane().add(panel);
 			frame.setVisible(true);
 
 		}
-		boolean isButtonSelected = jRadioButton2.isSelected();
+		boolean isButtonSelected = jCheckBox.isSelected();
 		if (isButtonSelected) {
 		} else {
 
@@ -48,5 +48,6 @@ public class ButtonAdditional {
 			JOptionPane.showMessageDialog(null, "Proceed with drinks");
 			ButtonDrinks.frame();
 		}
+
 	};
 }

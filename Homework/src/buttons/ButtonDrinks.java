@@ -34,6 +34,7 @@ public class ButtonDrinks {
 			btn = jRadioButton;
 			frame.getContentPane().add(panel);
 			frame.setVisible(true);
+			
 
 		}
 		boolean isButtonSelected = jRadioButton.isSelected();
@@ -49,6 +50,10 @@ public class ButtonDrinks {
 		public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null, "Drink Selected");
 			DispenseDrink.dispenseDrink();
+		
+			System.exit(0);
 		}
+
+		
 	};
 }
