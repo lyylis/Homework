@@ -1,18 +1,16 @@
 package buttons;
 
 /*
- * Buttons for selecting additional (like sugar).
+ * Buttons for selecting additional (like sugar). User can select several values. OK button will be tracked by ActionListener.
  */
 import hotDrinks.Additional;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.*;
 
 public class ButtonAdditional {
-
 	public static void frame2() {
 
 		JFrame frame = new JFrame();
@@ -25,7 +23,6 @@ public class ButtonAdditional {
 		JPanel panel = new JPanel();
 		for (Additional additional : Additional.values()) {
 			JCheckBox btn2 = new JCheckBox();
-			// btn2.addActionListener(listener);
 			btn2.setText(additional.toString());
 			panel.add(btn2);
 			jCheckBox.add(btn2);
@@ -33,19 +30,19 @@ public class ButtonAdditional {
 			frame.setVisible(true);
 
 		}
-		JButton OK = new JButton("OK");
+		JButton OK = new JButton("OK"); // OK button to confirm selection
 		OK.setSize(30, 30);
-		OK.addActionListener(listener);
+		OK.addActionListener(listener); // proceed with drinks if OK clicked
 		panel.add(OK);
 
 	}
 
 	static ActionListener listener = new ActionListener() {
 		@Override
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(ActionEvent e) { // tracks the OK button action
 
 			JOptionPane.showMessageDialog(null, "Proceed with drinks");
-			ButtonDrinks.frame();
+			ButtonDrinks.frame(); // selection for drinks
 		}
 
 	};

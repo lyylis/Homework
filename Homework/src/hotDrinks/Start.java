@@ -1,9 +1,15 @@
 package hotDrinks;
 
-/*
+/**
  * @author Lüüli Suuk IA17
+ * @param args
+ *            user input for entering money, payment check
  */
 public class Start {
+
+	/**
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
 		System.out.println("(Lüüli Suuk IA17) Hot Drinks Vending Machine");
@@ -24,6 +30,7 @@ public class Start {
 					+ ChangeMoney.issueChange(money)); // change is returned to
 														// user
 		}
+
 	}
 
 }

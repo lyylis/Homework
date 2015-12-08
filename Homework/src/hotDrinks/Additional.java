@@ -1,14 +1,13 @@
 package hotDrinks;
 
 /*
- * List of additional selections.
+ * List of additional selections
  */
 public enum Additional {
-	SUGAR ("Sugar"),
-	CREAM ("Cream");
+	SUGAR("Sugar"), CREAM("Cream");
 
-String text;
-	
+	String text;
+
 	private Additional(String text) {
 		this.text = text;
 	}

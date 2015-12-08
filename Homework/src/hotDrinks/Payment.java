@@ -1,4 +1,5 @@
 package hotDrinks;
+
 /*
  * User enters money into the vending machine.
  */
@@ -6,14 +7,13 @@ package hotDrinks;
 import lib.MoneyInputScreen;
 
 public class Payment {
-	public static double enterMoney(){
-	
+	public static double enterMoney() {
 
-		Double payAmount=0.0;
-		payAmount=MoneyInputScreen.userInput();
-		
+		Double payAmount = 0.0;
+		payAmount = MoneyInputScreen.userInput();
+
 		return payAmount;
-	
+
 	}
- 
+
 }

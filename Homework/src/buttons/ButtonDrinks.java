@@ -1,11 +1,10 @@
 package buttons;
 
 /*
- * Buttons select the drink.
+ * Buttons to select the drink. JRadioButton used.
  */
 import hotDrinks.DispenseDrink;
 import hotDrinks.Types;
-
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +12,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class ButtonDrinks {
-
 	public static void frame() {
 		JFrame frame = new JFrame();
 		frame.setTitle("Drinks");
@@ -34,7 +32,6 @@ public class ButtonDrinks {
 			btn = jRadioButton;
 			frame.getContentPane().add(panel);
 			frame.setVisible(true);
-			
 
 		}
 		boolean isButtonSelected = jRadioButton.isSelected();
@@ -47,12 +44,12 @@ public class ButtonDrinks {
 
 	static ActionListener listener = new ActionListener() {
 		@Override
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(ActionEvent e) { // when action performed,
+														// then dispense drink
 			DispenseDrink.dispenseDrink();
-		
-			System.exit(0);
+
+			System.exit(0); // close the dialogs
 		}
 
-		
 	};
 }

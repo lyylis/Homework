@@ -3,7 +3,7 @@ package hotDrinks;
 import buttons.*;
 
 /*
- * User will make a selection to add sugar and then chooses the drink. Both selections are presented as buttons.
+ * User will first select additional (sugar,cream)
  */
 
 public class Select {
