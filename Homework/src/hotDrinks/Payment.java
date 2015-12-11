@@ -1,9 +1,8 @@
 package hotDrinks;
 
-/*
- * User enters money into the vending machine.
+/**
+ * @return money payed into the vending machine
  */
-
 import lib.MoneyInputScreen;
 
 public class Payment {

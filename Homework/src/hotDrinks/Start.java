@@ -7,10 +7,6 @@ package hotDrinks;
  */
 public class Start {
 
-	/**
-	 * @param args
-	 */
-
 	public static void main(String[] args) {
 		System.out.println("(Lüüli Suuk IA17) Hot Drinks Vending Machine");
 		System.out.println("Welcome!");

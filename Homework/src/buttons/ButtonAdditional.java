@@ -32,16 +32,14 @@ public class ButtonAdditional {
 		}
 		JButton OK = new JButton("OK"); // OK button to confirm selection
 		OK.setSize(30, 30);
-		OK.addActionListener(listener); // proceed with drinks if OK clicked
+		OK.addActionListener(listener); // proceed with drinks if OK
 		panel.add(OK);
 
 	}
 
 	static ActionListener listener = new ActionListener() {
 		@Override
-		public void actionPerformed(ActionEvent e) { // tracks the OK button action
-
-			JOptionPane.showMessageDialog(null, "Proceed with drinks");
+		public void actionPerformed(ActionEvent e) { // tracks the OK button
 			ButtonDrinks.frame(); // selection for drinks
 		}
 

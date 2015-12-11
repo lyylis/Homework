@@ -1,7 +1,9 @@
 package hotDrinks;
 
-/*
- * Method that checks the amount of money entered by the user.
+/**
+ * @param enteredMoney
+ * @return true if amount entered is greater than or equal to price, false if
+ *         amount is less
  */
 
 public class AmountMoney {

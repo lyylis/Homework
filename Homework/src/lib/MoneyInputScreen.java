@@ -10,7 +10,7 @@ import javax.swing.*;
  * Copied base code from: https://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
  */
 /**
- * @return Cancel button in inputDialog
+ * @return convert string value into double
  */
 
 public class MoneyInputScreen {
@@ -22,8 +22,11 @@ public class MoneyInputScreen {
 
 		if (s == null) {
 			System.out.println("Payment cancelled!");
-			return null;
+			System.exit(0);
+		} else {
+
 		}
+
 		double sv = Double.parseDouble(s); // String value is turned into double
 		return sv;
 	}
